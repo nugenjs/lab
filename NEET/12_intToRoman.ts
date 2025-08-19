@@ -18,13 +18,13 @@ const intToRomanMap = [
     {int: 1, romanChar: 'I'},
 ];
 
-
 const intToRoman = (num: number) => {
     let romanRes = '';
     for (let i = 0; i < intToRomanMap.length && num > 0; i++) {
+        console.log(`i = ${i}`)
         const romanMapInt = intToRomanMap[i]?.int!;
         const romanMapChar = intToRomanMap[i]?.romanChar!;
-        if (num > romanMapInt) {
+        if (num >= romanMapInt) {
             const firstDigit = num.toString()[0];
             let remainder = 0;
             if (firstDigit === '9') {
@@ -48,9 +48,9 @@ const intToRoman = (num: number) => {
             num = remainder;
         }
     }
-
     return romanRes;
 }
 
 
 console.log(intToRoman(3749))
+console.log(intToRoman(1))
