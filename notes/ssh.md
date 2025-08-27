@@ -1,4 +1,4 @@
-# SSSSSSHHHHHHHHH 
+# SSSSSSHHHHHHHHH 🤫
 
 ## Generate keys for GitHub
 ``` MAC

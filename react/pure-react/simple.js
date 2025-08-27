@@ -5,7 +5,28 @@
 class Simple extends React.Component {
     render() {
         // return <div>helo {this.props['name']}</div>
-        return React.createElement('div', null, 'Helo, ' + this.props.name + '!');
+        // return React.createElement('div', null, 'Helo, ' + this.props.name + '!');
+        return React.createElement('div', {
+            style: {
+                display: 'flex'
+            }
+        }, 
+            React.createElement('div', { style: {
+                display: 'inline-flex',
+                fontWeight: '700',
+                whiteSpaceCollapse: "preserve"
+            } }, 'Helo '),
+            React.createElement('p', {
+                style: {
+                    margin: 'unset'    
+                }
+            }, this.props.name),
+            React.createElement('div', { style: {
+                display: 'inline-flex',
+                fontWeight: '700',
+                whiteSpaceCollapse: "preserve"
+            } }, ' !'),
+        );
     }
 }
 

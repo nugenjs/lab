@@ -1,3 +1,5 @@
+## My current ~/.vimrc
+
 vnoremap \y y:call system("pbcopy", getreg("\""))<CR>
 nnoremap \p :call setreg("\"", system("pbpaste"))<CR>p
 

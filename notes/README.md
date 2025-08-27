@@ -1,2 +1,2 @@
 # Notes 
-Place to hold technical documentation
+Notes for quick reference

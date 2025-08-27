@@ -1,2 +1,2 @@
 # NEET code
-I just think the challenges are neat.
+The ~~neetest~~ code you've ever seen.

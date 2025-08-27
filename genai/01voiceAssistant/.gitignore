@@ -1,0 +1,5 @@
+*.wav
+piper/*
+whisper.cpp/*
+
+audio_out/*

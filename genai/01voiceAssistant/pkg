@@ -1,0 +1,9 @@
+PIP
+playsound pkg for playing audio from buffer
+PyObjC # required due to python 2 playsound
+
+
+
+
+brew 
+brew install sox
