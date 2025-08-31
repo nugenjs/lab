@@ -61,23 +61,4 @@ def speak_with_piper(text, model_path="en_US-amy-low.onnx", output_path="/tmp/pi
     subprocess.run(["afplay", output_path])
 
 
-# speak(''' In TIG (Tungsten Inert Gas) welding, the choice of gas significantly impacts the quality and behavior of the 
-# weld. However, it might seem counterintuitive that helium, being lighter and less dense than argon, would 
-# produce a hotter weld.
-
-# The misconception arises because people often think about heat conduction in terms of mass. In reality, the 
-# heating effect in welding is more related to the ability of a gas to absorb and conduct energy efficiently 
-# from the tungsten electrode to the workpiece, rather than its mass or density.
-
-# Helium has a higher thermal conductivity compared to argon. This means it transfers heat more efficiently 
-# from the tungston electrode to the workpiece. The increased heat transfer results in a hotter weld pool and, 
-# consequently, a hotter weld.
-
-# In addition, helium is less soluble in metals than argon. This reduces solidification cracking and produces 
-# cleaner welds with improved aesthetics. However, it's important to note that using helium for TIG welding can 
-# be more expensive due to its cost and lower availability compared to argon.
-
-# So, while helium may not be physically "hotter," the way it conducts heat allows it to produce hotter welds 
-# when used in a TIG setup.''')
-
 speak_with_piper(''' hello ''')

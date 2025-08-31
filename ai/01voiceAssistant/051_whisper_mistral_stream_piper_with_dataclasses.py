@@ -5,6 +5,8 @@ import subprocess
 from dataclasses import dataclass
 from playsound import playsound
 
+# WORK IN PROGRESS
+
 # === Config ===
 PIPER_BIN = "./piper/build/piper"
 ESPEAK_DATA = "/opt/homebrew/share/espeak-ng-data"
@@ -80,11 +82,10 @@ if __name__ == "__main__":
 
     try:
         speech.speak(
-            "Eyo esé, welcome to 7-Eleven holmes",
+            "What the helly",
             model="en_GB-southern_english_female-low.onnx",
             length_scale=0.3
         )
-        speech.speak("Alright then, here's your bloody answer.", length_scale=0.8)
         speech.queue.join()  # Wait for all tasks to finish
     finally:
         speech.stop()

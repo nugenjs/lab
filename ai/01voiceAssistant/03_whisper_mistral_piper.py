@@ -155,10 +155,10 @@ def transcribe_with_whisper(audio_path):
     
 
 def main():
-    speak("What do you want?")
+    speak("What the helly?")
     audio_file = "./mic_input.wav"
     record_until_silence(threshold=500, silence_duration=2, sample_rate=16000, output_path=audio_file)
-    speak("Alright then, hold up mate, let me think about it...")
+    speak("Thinking...")
     text = transcribe_with_whisper(audio_file)
     print("🎤 Text to speak:", text)
 

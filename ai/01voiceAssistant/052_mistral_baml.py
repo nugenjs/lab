@@ -184,8 +184,8 @@ if __name__ == "__main__":
 
 # def main():
 #     # Example usage
-#     mistral_response = query_mistral('in one paragraph, describe the big bang theory')
-#     mistral_stream1 = mistral_stream('in one paragraph, describe the big bang theory')
+#     mistral_response = query_mistral('what are you')
+#     mistral_stream1 = mistral_stream('what are you')
 #     print(mistral_stream1)
 
 #     # # stop the python script here 
@@ -195,7 +195,7 @@ if __name__ == "__main__":
 #     # if mistral_response:
 #     #     speak(mistral_response)
 #     # else:
-#     #     speak("How about you actually run the llm, you lazy bastard?")
+#     #     speak("try again idiot")
 
 # # if __name__ == "__main__":
 # if __name__ == "__main__":

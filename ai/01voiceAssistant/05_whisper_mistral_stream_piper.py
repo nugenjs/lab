@@ -23,28 +23,9 @@ PIPER_MODEL_SEMAINE_MED = "en_GB-semaine-medium.onnx"
 WHISPER_MODEL = "./whisper.cpp/models/ggml-medium.bin"
 # PIPER_MODEL = "en_GB-southern_english_female-low.onnx"
 WHISPER_BIN = "./whisper.cpp/build/bin/whisper-cli"  # Adjust if your whisper.cpp binary has a different name
+WHISPER_BACKGROUND_THRESHOLD = 1000 # Macbook with AC on
 PIPER_BIN = "./piper"
 MISTRAL_BIN = "./mistral"  # Adjust if your Mistral binary has a different name
-
-
-
-
-
-
-
-# last_checkpoint_time = time.time()
-
-# def time_since_last_checkpoint():
-#     global last_checkpoint_time
-#     current_time = time.time()
-#     elapsed = current_time - last_checkpoint_time
-#     last_checkpoint_time = current_time
-#     print(f"⏱️ Time since last checkpoint: {elapsed:.2f} seconds")
-
-
-
-
-
 
 
 
@@ -273,17 +254,8 @@ def main():
         print("Chat history loaded:")
         print(chat_history)
 
-        # speak("Hey esé. Welcome to 7-Eleven holmes", model=PIPER_MODEL_SOUF_ENGLISH_LOW, length_scale=0.45)
         piper_file_output = "./mic_input.wav"
-        record_until_silence(threshold=500, silence_duration=2, sample_rate=16000, output_path=piper_file_output)
-        # speak("alright then, hold up mate, let me think about it, you ignorant piece of shit")
-        # speech.speak("What the hell",
-        #                  model='en_GB-southern_english_female-low.onnx', length_scale=0.3)
-
-        # print("got here 1")
-        # speech.speak("Give me a minute foo",
-        #                  model='en_GB-semaine-medium.onnx', length_scale=0.45)
-        # print("got here 2")
+        record_until_silence(threshold=WHISPER_BACKGROUND_THRESHOLD, silence_duration=2, sample_rate=16000, output_path=piper_file_output)
         user_prompt = transcribe_with_whisper(piper_file_output)
         print("got here 3")
 
@@ -296,8 +268,6 @@ def main():
             break
 
         try:
-            # user_prompt = "Tell me a story about a brave little toaster who saves the world, but in one paragraph."
-            # full_response = stream_mistral_and_speak(f"User: {user_prompt}", speech)
             full_response = stream_mistral_and_speak(f'''{chat_history}
     User: {user_prompt}''', speech)
             print("got here 4")
@@ -319,18 +289,6 @@ def main():
 
     speech.stop()
 
-    # Example usage
-    # mistral_response = query_mistral(text)
-    # print(mistral_response)
-
-    # # stop the python script here 
-    # # return  # Removed invalid return statement
-    # sys.exit(0)
-
-    # if mistral_response:
-    #     speak(mistral_response)
-    # else:
-    #     speak("How about you actually run the llm, you lazy bastard?")
 
 # if __name__ == "__main__":
 if __name__ == "__main__":
