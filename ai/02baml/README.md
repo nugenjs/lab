@@ -30,7 +30,11 @@ Bad response: `{"candidate": {"name": "John Doe", "skills": ["Python programming
 
 
 ### Setup
-`uv add baml-py && uv run baml-cli init`
+`uv init`\
+`uv add baml-py`\
+`uv run baml-cli init`\
+Installing BAML extention for vscode if applicable\
+
 
 
 ### sources

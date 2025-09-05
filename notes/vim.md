@@ -1,26 +1,28 @@
 # VIM
 
 ## Dictionary
-`d` - delete
-`D` - d$ delete to end of line
-`a` - Insert mode start cursor after highlighted char
+`d` - delete\
+`D` - d$ delete to end of line\
+`a` - Insert mode start cursor after highlighted char\
 `i` - Insert mode start cursor at curr highlighted char
 
 ## Visual Mode
-Selecting char(s) with highlight  
-`v or V`: visual and vertical visual mode 
+Selecting char(s) with highlight\
+`v or V`: visual and vertical visual mode\
 `ctrl+v (mac)`: enter line  visual
 
 ### example usage
-`v` to enter visual mode. Highlight text you want to copy. y to yank. Move cursor to where you want to paste. `p` to paste copied text.
+`v` to enter visual mode. Highlight text you want to copy. y to yank. Move cursor to where you want to paste. `p` to paste copied text.\
+`Shift + v` visual line mode. Highlight test to copy to clipboard. Type `:` will auto fill `:'<,'>`. Set command to `:'<,'>w !clip.exe`
+
 
 
 
 
 ## Search and Replace
-`/` and type word  
-`n` next found   
-`N` prev found  
+`/` and type word\
+`n` next found\
+`N` prev found 
 
 
 ### example usage

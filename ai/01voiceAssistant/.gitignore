@@ -2,4 +2,7 @@
 piper/*
 whisper.cpp/*
 
+piper/**
+./piper/
+
 audio_out/*
