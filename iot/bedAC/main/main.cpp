@@ -4,6 +4,15 @@
 
 #define LED_PIN 10 // GPIO 10
 
+extern "C" void app_main() {
+  initArduino();     // Bring up Arduino runtime inside ESP-IDF
+  setup();           // Call your existing Arduino setup()
+  for (;;) {         // Cooperatively run loop()
+    loop();
+    vTaskDelay(1);   // yield to FreeRTOS
+  }
+}
+
 // ==== Wi-Fi credentials ====
 // const char* WIFI_SSID     = "iot";
 // const char* WIFI_PASSWORD = "thepasswordspecificallyforiot";
@@ -45,8 +54,8 @@ void setLed(bool on) {
 
   if (on) {
     Serial.println("LED is ON");
-    // delay(2000);
-    // digitalWrite(LED_PIN, LOW);
+    delay(2000);
+    digitalWrite(LED_PIN, LOW);
   } else {
     Serial.println("LED is OFF");
   }

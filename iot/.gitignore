@@ -1,0 +1,7 @@
+# esp32 stuff
+**/build
+**/managed_components
+# **/sdkconfig
+**/sdkconfig.old
+**/idf_component.yml
+**/dependencies.lock
