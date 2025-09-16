@@ -9,7 +9,10 @@ grep {flags} {regex pattern} {file}
 `-e`: not often used as is default. Treats `?, +, {, |, (, and )` as regular chars due to backwards compatibility.  
 `-E`: extended regular expression. Treats `?, +, {, |, (, and )` as special.  
 `-i`: makes pattern case insensitive.
-`-F`: matches string without any regular expression.    
+`-F`: matches string without any regular expression.\
+`-r`: recursive search excludes symbolic links.\
+`-R`: recursive search includes symbolic links.\
+`-A{0}`: includes {0} lines after the result. (e.g. `-A5` includes 5 lines after)
 
 ### examples
 ```

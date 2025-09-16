@@ -46,6 +46,10 @@ Exit monitor with `control + ]`
 `idf.py set-target esp32c3`\
 `idf.py build flash monitor -p /dev/cu.usbmodem2101`
 
+### Errors for __wrap_esp_log_writev
+Enable if you encounter `__wrap_esp_log_writev` errors when using Wi-Fi\
+`idf.py menuconfig`\
+Navigate to `Component config -> Diagnostics -> Use external log wrapper`
 
 
 ### Install arduino to make life easier
@@ -55,3 +59,6 @@ Link code to arduino, in CMakeLists.txt:
 idf_component_register(SRCS "main.cpp" INCLUDE_DIRS ".")
 target_link_libraries(${COMPONENT_LIB} PUBLIC arduino-esp32)
 ```
+
+
+
