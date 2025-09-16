@@ -1,8 +1,4 @@
 *.wav
-piper/*
-whisper.cpp/*
-
-piper/**
-./piper/
-
-audio_out/*
+piper/
+whisper.cpp/
+audio_out/
