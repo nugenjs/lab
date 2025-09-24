@@ -1,0 +1,16 @@
+[Unit]
+Description=Bridge to convert HTTP requests to MQTT messages.
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi3
+WorkingDirectory=/home/pi3/http-mqtt-bridge
+ExecStart=/home/pi3/.local/bin/uv run app.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

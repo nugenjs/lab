@@ -23,3 +23,7 @@ Create .gitignore before initial commit. Avoids adding node_modules to git.
 ## GitIgnore
 `/name`: Start with `/` to ignore in current directory\
 `name`: Ignores in subdirectories
+
+## Stash
+Copy stash from repo1 to repo2:\
+repo 1: `git stash show -up stash@{0} > /tmp/stash.patch`, repo 2: `git apply /tmp/stash.patch`.

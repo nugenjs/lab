@@ -20,4 +20,3 @@ set autoindent
 " set smartindent
 syntax enable
 filetype plugin indent on
-

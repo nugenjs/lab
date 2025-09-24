@@ -1,6 +1,14 @@
 # WaterBed
 Water cooled bed controlled by Seeed Studio esp32c3 through MQTT as an IoT device.
 
+### Usage
+Send MQTT message to topic `bed/command`
+- "on" to turn on
+- "off" to turn off
+- "up" to increase temperature
+- "down" to decrease temperature
+Status updates come back on topic `bed/status`
+
 ### Accomplishments
 - Use of ESP-IDF to build, flash, and monitor device through CLI instead of using ArduinoIDE and PlatformIO.
 - Use of Arduino component library instead of ESP-IDF for simpler code.

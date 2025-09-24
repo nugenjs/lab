@@ -1,0 +1,11 @@
+[project]
+name = "http-mqtt-bridge"
+version = "0.1.0"
+description = "A tiny FastAPI server that bridges HTTP to MQTT."
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi",
+  "uvicorn",
+  "pydantic",
+  "paho-mqtt",
+]

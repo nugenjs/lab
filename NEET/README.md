@@ -1,2 +1,2 @@
 # NEET code
-The ~~neetest~~ code you've ever seen.
+The ~~neetest~~ codiest code.

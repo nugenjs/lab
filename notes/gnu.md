@@ -1,4 +1,4 @@
-# Unix things
+# GNU
 
 
 ## quotes
@@ -20,3 +20,9 @@ echo "$(cat helloworld.txt)"  # hello world
 `rm filename`: removes file (only unlinks, data still exists)  
 `rmdir directory`: removes a directory  
 
+## xargs
+Takes output from one command and uses it as input for another command.\
+`-I`: replaces occurances with following string. (e.g. `-I{abc echo {abc`)
+
+Find all repos with pattern "cloned*" and get branch name (when working on multiple branches at the same time):\
+`ls -d *cloned* | xargs -I {} git -C {} rev-parse --abbrev-ref HEAD`

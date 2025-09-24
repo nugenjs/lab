@@ -4,6 +4,7 @@ package-lock.json
 **/deleteme.*
 **/.vscode/
 .env
+__pycache__
 
 
 # temp ignored
