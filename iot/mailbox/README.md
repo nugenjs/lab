@@ -11,8 +11,10 @@ Also holds records of messages sent and received with a DB.
 ## Technology
 - Raspberry Pi 3 B: lowest powered non-mini board in inventory with SSH.
 - Mosquitto MQTT: message bus
-- Python FASTAPI: chosen for easy modification with SSH.
+- ~~Python FASTAPI: chosen for easy modification with SSH. ~~
 - PostgreSQL: database to hold ever changing data structures.
+- Prisma: ORM with migration support to create and manage DB structure and types.
+- NodeJS + Express: chosen for easy modification with SSH and ability to use ORM typings.
 
 ## Setup
 - [mqtt](./mqtt/README.md)

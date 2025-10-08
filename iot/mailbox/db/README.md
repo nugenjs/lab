@@ -15,6 +15,20 @@ PostgreSQL was chosen for its flexibility with data structures.
 10. List users: `\du`
 11. Create a new table: `CREATE TABLE device_history ( id BIGSERIAL PRIMARY KEY, device_id INT NOT NULL, recorded_at TIMESTAMPTZ NOT NULL DEFAULT now(), data JSONB NOT NULL);`
 12. List tables: `\dt`
+13. Expose port 5432 in firewall: `sudo ufw allow 5432/tcp`
+
+### Optional to allow remote connections
+- expose port `vim /etc/postgresql/15/main/pg_hba.conf` and add CIDR block for IPv4
+- change listen address `vim /etc/postgresql/15/main/postgresql.conf` and change `listen_addresses = 'localhost'` to `listen_addresses = '*'`
+- exit the su postgres user: `exit`
+- restart PostgreSQL: `sudo systemctl restart postgresql`
+
+## Steps to initalize Prisma
+
+
+
+
+
 
 
 <!-- 9. Exit psql shell: `\q`

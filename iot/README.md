@@ -9,3 +9,12 @@ place to store current home automation setup, hopefully one day terraformify it
        [LAN]            |                        [IoT]
                         |
                         |        [MQTT raspi]   --------- [WaterBed esp32]
+
+
+
+
+
+
+
+### Future Needs
+- Server that holds secret key vault for devices to authenticate to mqtt broker
