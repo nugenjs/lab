@@ -1,5 +1,9 @@
 # Linux
 
+# ENV VARS
+`$XDG_SESSION_TYPE`: wayland or x11 (display server/compositor) 
+
+
 # systemctl commands
 `systemctl` is used to manage systemd services.
 Common commands:
