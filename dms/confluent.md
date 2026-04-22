@@ -1,0 +1,1 @@
+confluent is going to charge non profit, there are plans to use

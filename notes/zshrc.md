@@ -1,6 +1,15 @@
 # zshrc MAC config
 ### File can be loaded as is into ~/.zshrc
 
+
+## Keep History on Terminal Emulators
+export HISTFILE=~/.zsh_history
+export HISTSIZE=100000
+export SAVEHIST=100000
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt INC_APPEND_HISTORY
+
 ## Javscript
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

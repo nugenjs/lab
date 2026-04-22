@@ -1,5 +1,8 @@
 # Linux
 
+## Common Commands
+`file <filename>`: get info about a file such as architecture if executable.
+
 # ENV VARS
 `$XDG_SESSION_TYPE`: wayland or x11 (display server/compositor) 
 
@@ -20,3 +23,13 @@ Common commands:
 `journalctl -u yourservice -f`: follow logs in real-time
 
 
+## Package Managers
+### Debian, Raspi, Ubuntu
+`sudo apt update; sudo apt install <package_name>`  
+`update`: updates local repo to local list of available versions of packages
+### Fedora
+`sudo dnf install <package_name>`
+### Arch
+`sudo pacman -S <package_name>`
+### OpenSUSE
+`sudo zypper install <package_name>`

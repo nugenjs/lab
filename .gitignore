@@ -5,7 +5,7 @@ package-lock.json
 **/.vscode/
 .env
 __pycache__
-
+gitignore
 
 # temp ignored
 /mqtt/
